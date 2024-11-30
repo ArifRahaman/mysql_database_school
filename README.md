@@ -9,8 +9,9 @@ Add School (POST /addSchool):
 
 The API accepts details such as the name, address, latitude, and longitude of a school.
 It first validates the input using Joi to ensure the data is in the correct format.
-Before adding a school, it checks if a school with the same name, address, and location (latitude and longitude) already exists within a small tolerance of 0.001 degrees. This is to prevent duplicate schools in the database.
+Before adding a school, it checks if a school with the same name. This is to prevent duplicate schools in the database.
 If no duplicate is found, the school is added to the database, and the id is returned in the response.
+
 List Schools (GET /listSchools):
 
 The API allows users to fetch a list of schools from the database with pagination support (using limit and offset query parameters).
